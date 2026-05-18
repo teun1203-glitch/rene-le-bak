@@ -182,7 +182,7 @@
         if (existing) existing.remove();
         const frame = document.createElement('iframe');
         frame.id = 'yt-frame';
-        frame.src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=${isMuted ? 1 : 0}&start=1`;
+        frame.src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=${isMuted ? 1 : 0};
         frame.style.cssText = 'position:fixed;bottom:-9999px;width:1px;height:1px;opacity:0;';
         frame.allow = 'autoplay; encrypted-media';
         document.body.appendChild(frame);
