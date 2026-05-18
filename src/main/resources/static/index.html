@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>René le Bak</title>
+    <title>Rene le Bak</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         #app {
@@ -146,7 +146,7 @@
 
         document.getElementById('streak-num').textContent = streak + 'x';
         document.getElementById('streak-label').textContent =
-            streak === 1 ? category + ' — begin van streak' : category + ' streak' + ' !'.repeat(Math.min(streak - 1, 3));
+            streak === 1 ? category + ' Begin van streak' : category + ' streak' + ' !'.repeat(Math.min(streak - 1, 3));
 
         playAudio(data.youtubeId);
 
@@ -157,7 +157,7 @@
     function toggleMute() {
         isMuted = !isMuted;
         const btn = document.getElementById('btn-mute');
-        btn.textContent = isMuted ? 'Geluid uit' : 'Geluid aan';
+        btn.textContent = isMuted ? 'Geluid aan' : 'Geluid uit';
         btn.classList.toggle('muted', isMuted);
 
         const frame = document.getElementById('yt-frame');
@@ -182,7 +182,7 @@
         if (existing) existing.remove();
         const frame = document.createElement('iframe');
         frame.id = 'yt-frame';
-        frame.src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=${isMuted ? 1 : 0}`;
+        frame.src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=${isMuted ? 1 : 0}&start=2`;
         frame.style.cssText = 'position:fixed;bottom:-9999px;width:1px;height:1px;opacity:0;';
         frame.allow = 'autoplay; encrypted-media';
         document.body.appendChild(frame);
