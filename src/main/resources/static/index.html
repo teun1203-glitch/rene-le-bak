@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>René le Bak</title>
+    <title>Rene le Bak</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         #app {
@@ -146,7 +146,7 @@
 
         document.getElementById('streak-num').textContent = streak + 'x';
         document.getElementById('streak-label').textContent =
-            streak === 1 ? category + ' — begin van streak' : category + ' streak' + ' !'.repeat(Math.min(streak - 1, 3));
+            streak === 1 ? category + ' begin van streak' : category + ' streak' + ' !'.repeat(Math.min(streak - 1, 3));
 
         playAudio(data.youtubeId);
 
