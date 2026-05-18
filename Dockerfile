@@ -2,6 +2,7 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY . .
 RUN chmod +x gradlew
-RUN ./gradlew bootJar
+RUN ./gradlew bootJar --no-daemon
+RUN mv build/libs/*.jar app.jar
 EXPOSE 8080
-CMD ["java", "-jar", "build/libs/*.jar"]
+CMD ["java", "-jar", "app.jar"]
